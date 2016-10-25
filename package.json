@@ -1,6 +1,6 @@
 {
   "name": "vue-simple-paging",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "simple vue paging !!",
   "main": "index.js",
   "scripts": {
