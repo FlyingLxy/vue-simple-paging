@@ -14,7 +14,7 @@ Support Set the paging button number.
 ```
 //...a component
 //...script
-import paging from 'vue-paging';
+import paging from 'vue-simple-paging';
 
 export default {
   data() {
