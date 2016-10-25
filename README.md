@@ -1,13 +1,14 @@
-# simple vue paging
+## simple vue paging
 Support Set the paging button number.
-# props
+## props
 - className: The class name of the container. type String. default: 'paging'
 - totalPage: Total number of pages. type Number or String. required.
 - page: Current page. type Number or String. required.
 - pageCount: Needs to display the page button. type Number or String. default: 5.
-# method
+
+## method
 - pageChange: Page change callback(). params: selected page.
-# example:
+## example:
 ```
 //...a component
 //...script
@@ -16,7 +17,7 @@ import paging from 'vue-paging';
 export default {
   data() {
     return {
-	page: 1
+      page: 1
     }
   },
   components: {
