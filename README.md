@@ -2,10 +2,10 @@
 Support Set the paging button number.
 
 ## Props
-- className: The class name of the container. type String. default: 'paging'
-- totalPage: Total number of pages. type Number or String. required.
-- page: Current page. type Number or String. required.
-- pageCount: Needs to display the page button. type Number or String. default: 5.
+- **className**: The class name of the container. type String. Default: 'paging'
+- **totalPage**: Total number of pages. type Number or String. Dequired.
+- **page**: Current page. type Number or String. required.
+- **pageCount**: Needs to display the page button. type Number or String. Default: 5.
 
 ## Method
 - pageChange: Page change callback(). params: selected page.
