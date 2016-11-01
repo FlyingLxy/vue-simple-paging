@@ -8,7 +8,7 @@ Support Set the paging button number.
 - **pageCount**: Needs to display the page button. type Number or String. Default: 5.
 
 ## Method
-- pageChange: Page change callback(). params: selected page.
+- **change**: Page change callback(). **param**: String. selected page.
 
 ## Example:
 ```
@@ -40,6 +40,6 @@ export default {
   totalPage="30"
   page="page",
   pageCount="10"
-  @pageChange="pageChange"
+  @change="pageChange"
 >
 </paging>

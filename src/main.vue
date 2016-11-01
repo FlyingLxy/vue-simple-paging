@@ -1,4 +1,13 @@
 <script>
+  /**
+   * @file 分页组件
+   * @param { className } String 自定义class
+   * @param { totalPage } String/Number - 总页码数
+   * @param { page } String/Number - 当前页码
+   * @param { pageCount } String/Number - 显示页码按钮数
+   * @param { change } CallBack - 页码变化回调. 参数：String. 选中的页数
+   * @author XiaoYu.Lang Email: webdeveloperfox@gmail.com
+   */
   var util = {
     toNum: val => parseInt(val)
   }
@@ -92,21 +101,21 @@
 
 <template>
   <div :class="className + ' paging'">
-    <div class="btn-up" @click="page > 1 && $emit('pageChange',page - 1)">
+    <div class="btn-up" @click="page > 1 && $emit('change',page - 1)">
       <p>上一页</p>
     </div>
     <ul class="page-count">
       <li
         :class="{'active-page': p === parseInt(page)}"
         :key="p"
-        @click="p !== -1 && $emit('pageChange', p)"
+        @click="p !== -1 && $emit('change', p)"
         v-for="p in pages"
         v-text="p === -1 ? '...' : p"
         :style="p === -1 && {border: 0}"
         >
       </li>
     </ul>
-    <div class="btn-down" @click="page < totalPage && $emit('pageChange', page + 1)">
+    <div class="btn-down" @click="page < totalPage && $emit('change', page + 1)">
       <p>下一页</p>
     </div>
   </div>
