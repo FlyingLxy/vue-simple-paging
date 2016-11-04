@@ -56,19 +56,29 @@
     watch: {
       page: function () {
         this.pageCounter();
+      },
+      totalPage: function () {
+          this.pageCounter();
+      },
+      pageCount: function () {
+          this.pageCounter();
       }
     },
     methods: {
       pageCounter: function () {
         var _pageCount = parseInt(this.pageCount);
         var _totalPage = parseInt(this.totalPage);
+        this.pages.length = 0;
         var _page = this.page;
         var first = this.firstAndLast[0];
         var last = this.firstAndLast[1];
         var symbol = -1;
         var middle = _pageCount - 3;
         if (_pageCount >= _totalPage) {
-          return this.pages = _totalPage;
+          for (var i = 1; i < _totalPage + 1; i++) {
+              this.pages.push(i);
+          }
+          return;
         }
         if (_page <= Math.ceil(_pageCount/2)) {
           var arr = Array(_pageCount - 2).fill().map((v,i) => i + 2);
